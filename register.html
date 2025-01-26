@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 50px;
+            background-color: rgb(239, 235, 230);
+        }
+        .form-container {
+            padding: 30px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: 0 auto;
+            background-color:rgb(223, 209, 209);
+            border:solid black 3px ;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="address"],
+        input[type="phone number"],
+        input[type="password"],
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            background-color:rgb(19, 145, 122);
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color:rgb(54, 102, 94);
+        }
+    </style>
+</head>
+<body>
+    <a href="/public/index.html">Go back to Home Page</a>
+
+
+<div class="form-container">
+    <h2>Registration Form</h2>
+    <form action="/backend/database.js" method="POST">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="Address">Address</label>
+        <input type="Address" id="Address" name="Address" required>
+
+        <label for="Phone Number">Phone Number</label>
+        <input type="Phone Number" id="Phone Number" name="Phone Number" maxlength="10" pattern="[0-9]{10}" required placeholder="Enter 10-digit phone number" title="Please enter a valid 10-digit number" required>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+
+        <label for="confirm-password">Confirm Password</label>
+        <input type="password" id="confirm-password" name="confirm-password" required>
+
+        <input type="submit" value="Register">
+    </form>
+</div>
+
+</body>
+</html>
